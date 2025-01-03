@@ -69,6 +69,33 @@
             max-width: 100%;
             height: auto;
         }
+
+        h1 {
+            color: #4a62c0
+        }
+
+        section {
+            margin-top: 80px;
+            padding: 20px;
+            min-height: 600px;
+        }
+
+        .video-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .video-container video {
+            max-width: 300px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .video-container .text-content {
+            max-width: 600px;
+        }
     </style>
 </head>
 
@@ -84,35 +111,47 @@
     <section id="youngfit">
         <h1>UI/UX Designer</h1>
         <h3>- 영핏</h3>
-        <p>- 2024.9.1 ~ 12.9</p>
-        <p>- 애저웹앱, postgresql, chatGPT를 사용한 영어학습프로젝트 '영핏'</br>
-            - 2인 팀 프로젝트 페이지설계, DB설계, REACT 개발 담당</p>
-        <h3><button onclick="location.href='https://youngfitfrontend.azurewebsites.net';">YoungFit</button></h3>
-        <video controls width="600">
-            <source src="https://yangpakyung.blob.core.windows.net/yangpa/12-09-2024.MP4" type="video/mp4">
-        </video>
+        <div class="video-container">
+            <video controls>
+                <source src="https://yangpakyung.blob.core.windows.net/yangpa/12-09-2024.MP4" type="video/mp4">
+            </video>
+            <div class="text-content">
+                <p>- 2024.9.1 ~ 12.9</p>
+                <p>- 애저웹앱, postgresql, chatGPT를 사용한 영어학습프로젝트 '영핏'</br>
+                    - 2인 팀 프로젝트 페이지설계, DB설계, REACT 개발 담당</p>
+                <h3>
+                    <button
+                        onclick="window.open('https://youngfitfrontend.azurewebsites.net', '_blank');">YoungFit</button>
+                </h3>
+            </div>
+        </div>
     </section>
 
     <section id="isdh" style="background-color:#eaeffa">
-        <h1>InDesign & Web Develop</h1>
+        <h1>InDesign & Web Development</h1>
         <h3>- ISDH 국제학회</h3>
-        <p>- 2023.1~2024.1</p>
-        <p>- 홀로그램 국제학회로 회원가입, 논문접수, 해외결제, 증명발급, 메일링, 관리페이지 등 웹개발</p>
-        <p>- Proceeding Book, Catalog, 현수막, 명찰, 판넬 등 Product Design</p>
-        <h3><button onclick="location.href='https://isdh2023.kr'">ISDH 국제학회</button>
-        </h3>
-        <video controls width="600">
-            <source src="https://yangpakyung.blob.core.windows.net/yangpa/01-03-2025.MP4" type="video/mp4">
-        </video>
+        <div class="video-container">
+            <video controls>
+                <source src="https://yangpakyung.blob.core.windows.net/yangpa/01-03-2025.MP4" type="video/mp4">
+            </video>
+            <div class="text-content">
+                <p>- 2023.1~2024.1</p>
+                <p>- 홀로그램 국제학회로 회원가입, 논문접수, 해외결제, 증명발급, 메일링, 관리페이지 등 웹개발</p>
+                <p>- Proceeding Book, Catalog, 현수막, 명찰, 판넬 등 Product Design</p>
+                <h3>
+                    <button onclick="window.open('https://isdh2023.kr', '_blank');">ISDH 국제학회</button>
+                </h3>
+            </div>
+        </div>
     </section>
 
     <section id="icdc" style="background-color:#fff">
-        <h1>InDesign & Web Develop</h1>
+        <h1>InDesign & Web Development</h1>
         <h3>- 광운대학교 실감융합콘텐츠학과 (ICDC)</h3>
         <p>- 2022.1~2024.1</p>
         <p>- cafe24, WordPress를 수정하여 개발</br>
             - 사업계획서(PPT), 전시회를 위한 판넬 등 Product Design</p>
-        <h3><button onclick="location.href='https://icdc.kw.ac.kr'">ICDC</button>
+        <h3><button onclick="window.open('https://icdc.kw.ac.kr', '_blank');">ICDC</button></h3>
         </h3>
     </section>
 
