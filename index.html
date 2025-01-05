@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/index.html#isdh -->
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim Kyung</title>
     <style>
@@ -16,11 +18,21 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #333;
+            background-color: #4a62c0;
             color: white;
             padding: 10px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            transition: opacity 0.3s ease-in-out;
+            /* 부드러운 전환 효과 */
+            opacity: 0;
+            /* 초기 상태: 보이지 않음 */
+            display: block;
+        }
+
+        nav.show {
+            opacity: 1;
+            /* 보이는 상태 */
         }
 
         nav ul {
@@ -71,12 +83,15 @@
         }
 
         h1 {
-            color: #4a62c0
+            color: #4a62c0;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 3rem;
         }
 
         section {
             margin-top: 80px;
-            padding: 20px;
+            padding: 100px 20px;
             min-height: 600px;
         }
 
@@ -84,7 +99,7 @@
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
-            gap: 20px;
+            gap: 10%;
         }
 
         .video-container video {
@@ -96,134 +111,164 @@
         .video-container .text-content {
             max-width: 600px;
         }
-    </style>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+
+        .container section {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+        /* 반응형 디자인 */
+        @media (min-width: 769px) {}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column;
+                /* 세로 방향 정렬 */
+                align-items: center;
+                /* 가운데 정렬 */
+            }
 
-        nav ul li {
-            margin: 0 15px;
-        }
+            .video-container video {
+                max-width: 100%;
+                /* 비디오 너비를 화면에 맞춤 */
+            }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
+            .video-container .text-content {
+                text-align: center;
+                /* 텍스트 가운데 정렬 */
+            }
 
-        nav ul li a:hover {
-            color: #00bfff;
-        }
+            .container section {
+                max-width: 100%;
+                /* 섹션 너비 화면에 맞춤 */
+                padding: 10px;
+                /* 내부 여백 조정 */
+            }
 
-        section {
-            margin-top: 80px;
-            padding: 20px;
-            min-height: 600px;
-        }
+            nav ul {
+                flex-direction: column;
+                /* 모바일에서 네비게이션 세로 정렬 */
+            }
 
-        button {
-            padding: 10px;
-            border-radius: 20px;
-            border: 1px solid #4a62c0;
-            color: #4a62c0;
-        }
-
-        button:hover {
-            color: #fff;
-            background-color: #4a62c0;
-        }
-
-        video {
-            max-width: 100%;
-            height: auto;
+            nav ul li {
+                margin: 5px 0;
+                /* 아이템 간 간격 줄이기 */
+                text-align: center;
+            }
         }
     </style>
 </head>
 
 <body>
-    <nav>
+    <nav class="show">
         <ul>
             <li><a data-target="#youngfit">영핏</a></li>
             <li><a data-target="#isdh">ISDH</a></li>
             <li><a data-target="#icdc">ICDC</a></li>
+            <li><a data-target="#bsv">바로서비스</a></li>
+            <li><a data-target="#me">About Me</a></li>
         </ul>
     </nav>
+    <div class="container">
+        <section id="me">
+            <p>
+                사진<br>
+            </p>
+            <h2>김경</h2>
+            1977.12<br>
+            섬유디자인학과 졸업<br>
+            사회복지학과 학점이수 (사회복지사2급)<br>
+            정보처리기사 2019년 11월 22일 취득<br>
+            <br>
+            의류쇼핑몰 구축 및 운영<br>
+            세이브더칠드런 등 아동미술 지도<br>
+            도서관 봉사 560시간<br>
+            <br>
+            (주)바로서비스 근무 <br>
+            광운대학교 산학협력단 근무 <br>
+            로보티즈 노원학원 근무 <br>
+            <br>
+            남부여성발전센터 웹개발 과정 교육이수<br>
+            <br>
+            Email: jina26861@gmail.com
+            <p></p>
+        </section>
+    </div>
+    <div class="container">
+        <section id="youngfit">
+            <h1>UI/UX Designer</h1>
 
-    <section id="youngfit">
-        <h1>UI/UX Designer</h1>
-        <h3>- 영핏</h3>
-        <div class="video-container">
-            <video controls>
-                <source src="https://yangpakyung.blob.core.windows.net/yangpa/12-09-2024.MP4" type="video/mp4">
-            </video>
-            <div class="text-content">
-                <p>- 2024.9.1 ~ 12.9</p>
-                <p>- 애저웹앱, postgresql, chatGPT를 사용한 영어학습프로젝트 '영핏'</br>
-                    - 2인 팀 프로젝트 페이지설계, DB설계, REACT 개발 담당</p>
-                <h3>
-                    <button
-                        onclick="window.open('https://youngfitfrontend.azurewebsites.net', '_blank');">YoungFit</button>
-                </h3>
+            <div class="video-container">
+
+                <video controls="">
+                    <source src="https://yangpakyung.blob.core.windows.net/yangpa/12-09-2024.MP4" type="video/mp4">
+                </video>
+                <div class="text-content">
+                    <h3 class="title">- 영핏</h3>
+                    <p class="period">- 2024.9.1 ~ 12.9</p>
+                    <p>- 애저웹앱, postgresql, chatGPT를 사용한 영어학습프로젝트 '영핏'<br>
+                        - 2인 팀 프로젝트 페이지설계, DB설계, REACT 개발 담당</p>
+                    <h3>
+                        <button
+                            onclick="window.open(&#39;https://youngfitfrontend.azurewebsites.net&#39;, &#39;_blank&#39;);">YoungFit</button>
+                    </h3>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    <div class="container" style="background-color:#eaeffa">
+        <section id="isdh">
+            <h1>InDesign &amp; Web Development</h1>
 
-    <section id="isdh" style="background-color:#eaeffa">
-        <h1>InDesign & Web Development</h1>
-        <h3>- ISDH 국제학회</h3>
-        <div class="video-container">
-            <video controls>
-                <source src="https://yangpakyung.blob.core.windows.net/yangpa/01-03-2025.MP4" type="video/mp4">
-            </video>
-            <div class="text-content">
-                <p>- 2023.1~2024.1</p>
-                <p>- 홀로그램 국제학회로 회원가입, 논문접수, 해외결제, 증명발급, 메일링, 관리페이지 등 웹개발</p>
-                <p>- Proceeding Book, Catalog, 현수막, 명찰, 판넬 등 Product Design</p>
-                <h3>
-                    <button onclick="window.open('https://isdh2023.kr', '_blank');">ISDH 국제학회</button>
-                </h3>
+            <div class="video-container">
+                <video controls="">
+                    <source src="https://yangpakyung.blob.core.windows.net/yangpa/01-03-2025.MP4" type="video/mp4">
+                </video>
+                <div class="text-content">
+                    <h3>- ISDH 국제학회</h3>
+                    <p>- 2023.1~2024.1</p>
+                    <p>- 홀로그램 국제학회로 회원가입, 논문접수, 해외결제, 증명발급, 메일링, 관리페이지 등 웹개발</p>
+                    <p>- Proceeding Book, Catalog, 현수막, 명찰, 판넬 등 Product Design</p>
+                    <h3>
+                        <button onclick="window.open(&#39;https://isdh2023.kr&#39;, &#39;_blank&#39;);">ISDH
+                            국제학회</button>
+                    </h3>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    <div class="container" style="background-color:#fff">
+        <section id="icdc">
+            <h1>InDesign &amp; Web Development</h1>
+            <h3>- 광운대학교 실감융합콘텐츠학과 (ICDC)</h3>
+            <p>- 2022.1~2024.1</p>
+            <p>- cafe24, WordPress를 수정하여 개발<br>
+                - 사업계획서(PPT), 전시회를 위한 판넬 등 Product Design</p>
+            <h3><button onclick="window.open(&#39;https://icdc.kw.ac.kr&#39;, &#39;_blank&#39;);">ICDC</button></h3>
 
-    <section id="icdc" style="background-color:#fff">
-        <h1>InDesign & Web Development</h1>
-        <h3>- 광운대학교 실감융합콘텐츠학과 (ICDC)</h3>
-        <p>- 2022.1~2024.1</p>
-        <p>- cafe24, WordPress를 수정하여 개발</br>
-            - 사업계획서(PPT), 전시회를 위한 판넬 등 Product Design</p>
-        <h3><button onclick="window.open('https://icdc.kw.ac.kr', '_blank');">ICDC</button></h3>
-        </h3>
-    </section>
+        </section>
+    </div>
+    <div class="container" style="background-color:#eaeffa">
+        <section id="bsv">
+            <h3>- 바로서비스</h3>
+            <p>- 2020.1~2021.9</p>
+            <p>- 웹개발 및 웹, 앱디자인</p>
+            <h3><button onclick="window.open(&#39;https://barosvc.com/&#39;, &#39;_blank&#39;);">(주)바로서비스</button></h3>
 
-    <section>
+        </section>
+    </div>
 
-    </section>
+
     <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('show'); // 클래스 추가
+            } else {
+                nav.classList.remove('show'); // 클래스 제거
+            }
+        });
         // Easing 함수 정의 (Ease-out Quad)
         function easeOutQuad(t) {
             return t * (2 - t);
@@ -264,6 +309,46 @@
             });
         });
     </script>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+
+
 </body>
 
 </html>
